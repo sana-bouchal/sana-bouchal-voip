@@ -9,9 +9,24 @@ Installation des paquets nécessaires, exécutez la commande suivante : `sudo ap
 
 Installer et configurer un serveur Asterisk : Pour installer les paquets nécessaires, exécutez la commande suivante: 
 
+`cd /usr/src
+sudo wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-22-current.tar.gz
+sudo tar xvf asterisk-22-current.tar.gz
+cd asterisk-22.2.0`
 
 - Configurer PJSIP pour la gestion des appels VoIP.
+  
+  `sudo ./configure
+sudo make
+sudo make install
+sudo make samples
+sudo make config
+`
 - Mettre en place des extensions et des règles d'appel.
+  Ouvrez le fichier de configuration :
+
+`sudo nano /etc/asterisk/pjsip.conf`
+
 - Configurer la messagerie vocale.
 - Intégrer GoogleTTS pour la synthèse vocale.
 - Automatiser l'ajout d'utilisateurs à partir d'un fichier CSV.
